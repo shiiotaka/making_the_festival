@@ -30,4 +30,4 @@
 https://www.figma.com/file/FUdzTg9UeIh2lNG8XkgqTT/PF-PC%E7%94%BB%E9%9D%A2?node-id=0%3A1
 
 ## ER図
-https://gyazo.com/7effc42a727ad05c01883eccd09a8215
+https://gyazo.com/23918350d5d5b40ffad37bf9f60a9409
