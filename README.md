@@ -28,3 +28,6 @@
 
 ## 画面遷移図
 https://www.figma.com/file/FUdzTg9UeIh2lNG8XkgqTT/PF-PC%E7%94%BB%E9%9D%A2?node-id=0%3A1
+
+## ER図
+https://gyazo.com/a74c68c4fc4e8b207da90b1ac35f2760
