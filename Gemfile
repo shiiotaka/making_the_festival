@@ -52,6 +52,11 @@ group :development do
 
   # 文法品質チェックgem
   gem 'rails_best_practices'
+
+  # 文法チェックrubocop
+  gem 'rubocop',                     require:false
+  gem 'rubocop-rails',               require:false
+  gem 'rubocop-checkstyle_formatter' require:false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
