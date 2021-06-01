@@ -31,5 +31,12 @@ module MakingTheFestival
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Rails generate設定
+    config.generators do |g|
+      g.assets         false # CSS,JavaScriptファイルを作成しない
+      g.skip_routes    true  # ルーティングを自動生成しない
+    end
+
   end
 end
