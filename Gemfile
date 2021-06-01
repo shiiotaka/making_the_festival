@@ -49,6 +49,9 @@ group :development do
   # デバッグ用gem
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  # 文法品質チェックgem
+  gem 'rails_best_practices'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
