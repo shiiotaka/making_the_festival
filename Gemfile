@@ -38,8 +38,8 @@ group :development, :test do
   gem 'pry-doc'
 
   # RSpecテストgem
-  gem "rspec-rails"
-  gem "factory_bot_rails"
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
