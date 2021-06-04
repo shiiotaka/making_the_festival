@@ -18,4 +18,8 @@ require("channels")
 
 // Bootstrap導入
 import 'bootstrap'
+
+// font-awesomeを追加
+import '@fortawesome/fontawesome-free/js/all'
+
 import '../stylesheets/application'
