@@ -16,10 +16,6 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-// Bootstrap導入
-import 'bootstrap'
-
-// font-awesomeを追加
-import '@fortawesome/fontawesome-free/js/all'
-
+import 'bootstrap' // Bootstrap導入
+import '@fortawesome/fontawesome-free/js/all' // font-awesomeを追加
 import '../stylesheets/application'
