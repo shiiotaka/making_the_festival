@@ -5,16 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%# Bootstrapの導入 %>
+    <%# bootstrapの導入%>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'shared/header'%>
+    <%= render 'shared/header'%> <%# ヘッダー%>
     <div class='container'>
       <%= yield %>
     </div>
-    <%= render 'shared/footer'%>
+    <%= render 'shared/footer'%> <%# フッター%>
   </body>
 </html>
