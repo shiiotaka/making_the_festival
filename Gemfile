@@ -68,3 +68,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # ログイン認証
 gem 'sorcery'
+
+# Rails日本語化
+gem 'rails-i18n', '~> 6.0.0'
+
