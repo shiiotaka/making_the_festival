@@ -31,6 +31,9 @@
 # vendor/bundleは管理しない
 vendor/bundle
 
+# swpファイルを管理しない
+*.swp
+
 /public/packs
 /public/packs-test
 /node_modules

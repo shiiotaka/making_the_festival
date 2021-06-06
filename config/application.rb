@@ -36,6 +36,7 @@ module MakingTheFestival
     config.generators do |g|
       g.assets         false # CSS,JavaScriptファイルを作成しない
       g.skip_routes    true  # ルーティングを自動生成しない
+      g.helper         false # ヘルパーを自動生成しない
     end
   end
 end
