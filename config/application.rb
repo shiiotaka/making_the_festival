@@ -37,6 +37,11 @@ module MakingTheFestival
       g.assets         false # CSS,JavaScriptファイルを作成しない
       g.skip_routes    true  # ルーティングを自動生成しない
       g.helper         false # ヘルパーを自動生成しない
+      g.test_framework :rspec, # RSpecを使用
+        controller_specs: false, # controller specは作成しない
+        view_specs:       false, # view specは作成しない
+        routing_specs:    false, # routing specは作成しない
+        helper_specs:     false  # helper specは作成しない
     end
   end
 end
