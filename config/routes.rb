@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index new create]
 
-  get  'login'  => 'user_sessions#new',     :as => :login
-  post 'login'  => 'user_sessions#create'
-  post 'logout' => 'user_sessions#destroy', :as => :logout
+  get    'login'  => 'user_sessions#new',     :as => :login
+  post   'login'  => 'user_sessions#create'
+  delete 'logout' => 'user_sessions#destroy', :as => :logout
 end
