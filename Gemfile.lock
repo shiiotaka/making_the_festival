@@ -248,6 +248,9 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.15.3)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sorcery (0.16.1)
       bcrypt (~> 3.1)
       oauth (~> 0.5, >= 0.5.5)
@@ -311,6 +314,7 @@ DEPENDENCIES
   rubocop-checkstyle_formatter
   rubocop-rails
   sass-rails (>= 6)
+  simple_form
   sorcery
   spring
   spring-watcher-listen (~> 2.0.0)
