@@ -2,5 +2,8 @@ Rails.application.routes.draw do
   root 'static_pages#home' # rootディレクトリ
 
   resources :users, only: %i[index new create]
-  resources :user_sessions, only: %i[new create destroy]
+
+  get  'login',  => 'user_sessions#new',     :as => :login
+  post 'login',  => 'user_sessions#create'
+  post 'logout', => 'user_sessions#destroy', :as => :logout
 end
