@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home' # rootディレクトリ
 
-  resources :users, only: %i[index new create]
+  resources :users, only: %i[new create index]
 
   get    'login'  => 'user_sessions#new',     :as => :login
   post   'login'  => 'user_sessions#create'

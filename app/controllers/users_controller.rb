@@ -1,21 +1,17 @@
 class UsersController < ApplicationController
 
-  def index
-  end
-
   # GET /users/new Prefix => new_user
   def new
     @user = User.new
   end
 
+  # POST /users Prefix => users
   def create
     @user = User.new(user_params)
-
-    # @userのデータ保存に成功するとき、login_pathにリダイレクトする
-    # falseの場合、newアクションにrenderする
     if @user.save
-      redirect_to login_path, notice: 'ユーザー登録が完了しました'
+      redirect_to login_path, success: "「#{@user.name}」さんのユーザー登録が完了しました。"
     else
+      flash.now[:danger]= '残念失敗しました'
       render :new
     end
   end
@@ -24,6 +20,6 @@ class UsersController < ApplicationController
 
   # ストロングパラメーター
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
