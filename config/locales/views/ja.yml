@@ -1,0 +1,15 @@
+ja:
+  simple_form:
+    required:
+      html: '<abbr class="nec">必須</abbr>'
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+  users:
+    new:
+      title: 'ユーザー登録'
+  user_sessions:
+    new:
+      title: 'ログイン'
+

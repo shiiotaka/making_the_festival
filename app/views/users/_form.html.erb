@@ -1,0 +1,8 @@
+<%= simple_form_for user do |f| %>
+  <%# <%= f.input :name,  required: false, placeholder: '山田 太郎' %1><br /> %>
+  <%= f.input :name,  placeholder: '山田 太郎' %><br />
+  <%= f.input :email, placeholder: 'example@example.com' %><br />
+  <%= f.input :password, hint: '※3文字以上で入力してください' %><br />
+  <%= f.input :password_confirmation %><br />
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

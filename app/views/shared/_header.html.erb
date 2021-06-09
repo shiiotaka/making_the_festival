@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <a class="navbar-brand" href="#">アプリロゴ</a>
+    <%= link_to 'アプリロゴ', root_url, class:'navbar-brand' %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,7 +15,7 @@
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to '#', class:'nav-link' do %>
+          <%= link_to login_path, class:'nav-link' do %>
             <div class='text-center'>
               <i class="fas fa-sign-in-alt"></i>
             </div>
@@ -23,7 +23,7 @@
           <% end %>
         </li>
         <li class="nav-item">
-          <%= link_to '#', class:'nav-link' do%>
+          <%= link_to new_user_path, class:'nav-link' do%>
             <div class='text-center'>
               <i class="fas fa-user-plus"></i>
               <p>ユーザー登録</p>

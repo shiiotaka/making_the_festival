@@ -37,6 +37,20 @@ module MakingTheFestival
       g.assets         false # CSS,JavaScriptファイルを作成しない
       g.skip_routes    true  # ルーティングを自動生成しない
       g.helper         false # ヘルパーを自動生成しない
+      g.test_framework :rspec, # RSpecを使用
+        controller_specs: false, # controller specは作成しない
+        view_specs:       false, # view specは作成しない
+        routing_specs:    false, # routing specは作成しない
+        helper_specs:     false  # helper specは作成しない
     end
+
+    # 言語ファイルを階層ごとに設定するためのコード
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+    # アプリケーションが対応している言語のホワイトリスト
+    config.i18n.available_locales = %i(ja en)
+
+    # デフォルトの言語設定
+    config.i18n.default_locale = :ja
   end
 end

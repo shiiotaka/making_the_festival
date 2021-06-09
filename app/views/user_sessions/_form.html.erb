@@ -1,0 +1,32 @@
+<%= form_with url: login_path, local: true, method: :post do |f| %>
+  <div class="form-field">
+    <%= f.label :email, User.human_attribute_name(:email), class:'form-label' %><br />
+    <%= f.text_field :email, class:'form-control' %>
+  </div>
+  <div class="form-field">
+    <%= f.label :password, User.human_attribute_name(:password), class:'form-label' %><br />
+    <%= f.password_field :password, class:'form-control' %>
+  </div>
+  <br />
+  <div class="actions">
+    <%= f.submit (t 'defaults.login'), class:'btn btn-primary' %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+<%# <%= simple_form_for :login, url: login_path do |f| %1> %>
+
+<%#     <%= f.input :email,    required: false, label: 'メールアドレス' %1> %>
+<%#     <%= f.input :password, required: false, label: 'パスワード' %1> %>
+<%#     <%= f.button :submit %1> %>
+
+<%# <% end %1> %>
