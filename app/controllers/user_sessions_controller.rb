@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
       # redirect_back_or_toメソッドは保存されたURLがある場合、そのURLに。ない場合は指定されたURLにリダイレクトする
       redirect_back_or_to(:users, notice: 'ログインに成功しました')
     else
-      flash.now[:alert] = 'ログインに失敗しました'
+      flash.now[:danger] = 'ログインに失敗しました'
       render action: 'new'
     end
   end

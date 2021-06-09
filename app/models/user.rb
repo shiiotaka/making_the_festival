@@ -5,5 +5,6 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }          # passwordが一致しているかの比較
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] } # password_confirmationが空白でないこと
 
-  validates :email, uniqueness: true                                                                     # email属性の値が一意であること
+  validates :email, uniqueness: true, presence: true                                                     # email属性の値が一意であること,空白でないこと
+  validates :name, presence: true                                                                        # 名前が空白でないこと
 end
