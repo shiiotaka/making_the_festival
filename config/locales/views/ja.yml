@@ -1,4 +1,7 @@
 ja:
+  simple_form:
+    required:
+      html: '<abbr class="nec">必須</abbr>'
   defaults:
     login: 'ログイン'
     register: '登録'

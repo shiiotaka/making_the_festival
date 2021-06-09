@@ -48,7 +48,7 @@ module MakingTheFestival
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     # アプリケーションが対応している言語のホワイトリスト
-    config.i18n.available_locales = %i(ja)
+    config.i18n.available_locales = %i(ja en)
 
     # デフォルトの言語設定
     config.i18n.default_locale = :ja
