@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  # ログインしていなくてもアクセスできる
+  skip_before_action :require_login, only: [:new, :create]
+
   # GET /users/new Prefix => new_user
   def new
     @user = User.new
