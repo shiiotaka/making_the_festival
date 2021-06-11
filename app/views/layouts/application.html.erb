@@ -11,8 +11,12 @@
   </head>
 
   <body>
-    <%= render 'shared/header'%> <%# ヘッダー%>
-    <%= render 'shared/flash'%> <%# フラッシュメッセージ%>
+    <% if logged_in? %> 
+      <%= render 'shared/header' %> <%# ログイン中のユーザーのHeader %>
+    <% else %> 
+      <%= render 'shared/not_login_header' %> <%# ログインしていないユーザーのHeader %>
+    <% end %>
+    <%= render 'shared/flash'%>  <%# フラッシュメッセージ %>
       <%= yield %>
     <%= render 'shared/footer'%> <%# フッター%>
   </body>
