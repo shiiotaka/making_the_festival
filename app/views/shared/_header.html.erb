@@ -6,30 +6,91 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <%= link_to '#', class:'nav-link' do %>
-            <div class='text-center'>
-              <i class="fas fa-info"></i>
-            </div>
-            <p>ガイドライン</p>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to login_path, class:'nav-link' do %>
-            <div class='text-center'>
-              <i class="fas fa-sign-in-alt"></i>
-            </div>
-            <p>ログイン</p>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to new_user_path, class:'nav-link' do%>
-            <div class='text-center'>
-              <i class="fas fa-user-plus"></i>
-              <p>ユーザー登録</p>
-            </div>
-          <% end %>
-        </li>
+
+        <% if current_user %> <%# ログイン中のユーザー %>
+          <li class="nav-item">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-info"></i>
+              </div>
+              <p>ガイドライン</p>
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-list-ol"></i>
+              </div>
+              <p>セットリスト</p>
+            <% end %>
+          </li>
+
+           <li class="nav-item">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-guitar"></i>
+              </div>
+              <p>フェス一覧</p>
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-podcast"></i>
+              </div>
+              <p>Myフェス</p>
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <p>アカウント</p>
+            <% end %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to logout_path, method: :delete, class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-sign-out-alt"></i>
+              </div>
+              <p>ログアウト</p>
+            <% end %>
+          </li>
+
+
+
+        <% else %> <%# ログインしていないユーザー %>
+          <li class="nav-item active">
+            <%= link_to '#', class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-info"></i>
+              </div>
+              <p>ガイドライン</p>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to login_path, class:'nav-link' do %>
+              <div class='text-center'>
+                <i class="fas fa-sign-in-alt"></i>
+              </div>
+              <p>ログイン</p>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to new_user_path, class:'nav-link' do%>
+              <div class='text-center'>
+                <i class="fas fa-user-plus"></i>
+                <p>ユーザー登録</p>
+              </div>
+            <% end %>
+          </li>
+
+        <% end %> <%# //if current_user %>
       </ul>
     </div>
   </nav>
