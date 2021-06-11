@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # ログインしていなくてもアクセスできる
+  skip_before_action :require_login, only: %i[new create]
 
   # GET /users/new Prefix => new_user
   def new
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to login_path, success: "「#{@user.name}」さんのユーザー登録が完了しました。"
     else
-      flash.now[:danger]= '残念失敗しました'
+      flash.now[:danger] = '残念失敗しました'
       render :new
     end
   end

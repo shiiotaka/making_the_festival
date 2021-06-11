@@ -1,4 +1,6 @@
 class UserSessionsController < ApplicationController
+  # ログインしていなくてもアクセスできる
+  skip_before_action :require_login, only: %i[new create]
 
   # GET /login Prefix => login
   def new; end
@@ -9,7 +11,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     # @userがtrue(存在する)の時、users_pathにリダイレクト
-    # false(存在しない)の時、newアクションを発火
+    # false(存在しない)の時、app/views/user_sessions/new.html.erbファイルを返す
     if @user
       # redirect_back_or_toメソッドは保存されたURLがある場合、そのURLに。ない場合は指定されたURLにリダイレクトする
       flash[:success] = 'ログインに成功しました'
@@ -23,6 +25,7 @@ class UserSessionsController < ApplicationController
   # DELETE /logout Prefix => logout
   def destroy
     logout
-    redirect_to(:users, norice: 'ログアウトしました')
+    flash[:success] = 'ログアウトしました'
+    redirect_to(:root)
   end
 end
