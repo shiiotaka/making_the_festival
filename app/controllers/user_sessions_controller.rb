@@ -1,7 +1,6 @@
 class UserSessionsController < ApplicationController
-
   # ログインしていなくてもアクセスできる
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: %i[new create]
 
   # GET /login Prefix => login
   def new; end

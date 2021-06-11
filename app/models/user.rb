@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] } # password_confirmationが空白でないこと
 
   validates :email, uniqueness: true,                                                                    # メールアドレスが重複しないこと
-                      presence: true,                                                                    # メールアドレスが空白でないこと
-                      format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i }                # 正しい入力フォームであること
+                    presence: true,                                                                    # メールアドレスが空白でないこと
+                    format: { with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i }                # 正しい入力フォームであること
   validates :name, presence: true                                                                        # 名前が空白でないこと
 end
