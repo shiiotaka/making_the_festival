@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # POST /users Prefix => users
   def create
     @user = User.new(user_params)
-    if @user.save
+    if @user.save!
       redirect_to login_path, success: "「#{@user.name}」さんのユーザー登録が完了しました。"
     else
       flash.now[:danger] = '残念失敗しました'
