@@ -1,6 +1,8 @@
-@import '~bootstrap/scss/bootstrap'; //Bootstrapを追加
+@import 'time_table_new.scss';
+;@import '~bootstrap/scss/bootstrap'; //Bootstrapを追加
 @import '~@fortawesome/fontawesome-free/scss/fontawesome'; //font-awesomeを追加
 
+// ユーザー登録画面、必須ボタン
 .nec {
     background-color: red;
     color: white;
@@ -8,3 +10,4 @@
     margin-left: 20px;
     padding: 0px 4px 2px 4px;
 }
+
