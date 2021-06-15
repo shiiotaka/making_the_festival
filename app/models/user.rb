@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
+  has_many :time_tables
+
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }      # 3文字以上
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }          # passwordが一致しているかの比較
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] } # password_confirmationが空白でないこと
