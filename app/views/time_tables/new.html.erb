@@ -7,9 +7,14 @@
       <p class='text-center fes-title'><span>フェス概要</span></p>
     </div>
     <div class="col-xs-12">
-      <div class='fes-form'>
-        <%= simple_form_for @time_table do |f| %>
-        <% end %>
+      <div class='container'>
+        <div class='fes-form'>
+          <%= simple_form_for @time_table do |f| %>
+            <%= f.input :name %>
+            <%= f.input :stage %>
+          <% end %>
+        </div>
+        <p class='text-center fes-title'><span>フェス概要</span></p>
       </div>
     </div>
   </div>
