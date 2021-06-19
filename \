@@ -8,12 +8,11 @@ class TimeTablesController < ApplicationController
   # POST /time_tables Prefix => time_tables
   def create
     @time_table = TimeTable.new(time_table_params)
-    @time_table.user_id = current_user.id
-    @time_table.save!
-    @artist = Artist.new(artist_params[:artist])
-    @artist.save!
-    flash[:success] = '成功'
-    redirect_to root_path
+    @artist = Artist.new(time_table_params
+    if @time_table.save && @artist.save
+      flash[:success] = '成功'
+      redirect_to root_path
+    end
   end
 
   private
@@ -23,8 +22,7 @@ class TimeTablesController < ApplicationController
     params.require(:time_table).permit(:name, :stage)
   end
 
-  def artist_params
-    binding.pry
-    params.require(:time_table).permit(artist:[:name])
-  end
+  # def artist_params
+  #   params.require(:artist).permit(:name)
+  # end
 end

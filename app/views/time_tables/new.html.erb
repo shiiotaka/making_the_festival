@@ -9,12 +9,36 @@
     <div class="col-xs-12">
       <div class='container'>
         <div class='fes-form'>
-          <%= simple_form_for @time_table do |f| %>
-            <%= f.input :name %>
-            <%= f.input :stage %>
+          <%= form_with model: @time_table, local: true do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+            <%# <%= f.submit %1> %>
+            <%= f.fields_for @artist do |a| %>
+              <%= a.label :name %>
+              <%= a.text_field :name %>
+              <%= f.submit %>
+            <% end %>
           <% end %>
+          <%# <%= simple_form_for @time_table do |f| %1> %>
+          <%#   <%= f.input :name %1> %>
+          <%#   <%= f.input :stage %1> %>
+            <%# <%= f.button :submit %1> %>
+          <%# <% end %1> %>
         </div>
-        <p class='text-center fes-title'><span>フェス概要</span></p>
+        <p class='text-center fes-title'><span>タイムテーブル</span></p>
+        <div>
+          <p class='text-center'>２ステージ</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class='container'>
+        fdsa
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class='container'>
+        fdsa
       </div>
     </div>
   </div>
