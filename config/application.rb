@@ -52,5 +52,8 @@ module MakingTheFestival
 
     # デフォルトの言語設定
     config.i18n.default_locale = :ja
+
+    # 時間を日本時間に設定
+    config.time_zone = 'Tokyo'
   end
 end
