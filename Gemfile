@@ -40,6 +40,9 @@ group :development, :test do
   # RSpecテストgem
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+
+  # ER図生成gem
+  gem 'rails-erd'
 end
 
 group :development do
@@ -61,6 +64,7 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-checkstyle_formatter'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -77,3 +81,4 @@ gem 'simple_form'
 
 # テストデータ挿入
 gem 'seed-fu'
+

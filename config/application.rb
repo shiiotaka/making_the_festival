@@ -55,5 +55,9 @@ module MakingTheFestival
 
     # 時間を日本時間に設定
     config.time_zone = 'Tokyo'
+
+    # field_with_errorsによるレイアウト崩れを防ぐ
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+
   end
 end
