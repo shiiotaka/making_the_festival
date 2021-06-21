@@ -5,5 +5,4 @@ class TimeTable < ApplicationRecord
 
   validates_associated :artists # Artistモデルのバリデーションを実行
   accepts_nested_attributes_for :artists # Artistモデルを更新、削除刷ることができる
-
 end
