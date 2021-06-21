@@ -12,12 +12,8 @@
           <%= form_with model: @time_table, local: true do |f| %>
             <div='form-field'>
               <%= f.label :name %>
-              <%= f.text_field :name, class:'form-control' %>
-            </div>
-            <div class='form-field'>
-              <%= f.label :stage %><br>
-              <%= f.number_field :stage, class:'form-control' %>
-            </div>
+              <%= f.text_field :name %>
+            </div><br>
             <%= f.fields_for :artists do |a| %>
               <%= a.label :name %>
               <%= a.text_field :name %>

@@ -2,7 +2,10 @@ class TimeTablesController < ApplicationController
   # GET /time_tables/new Prefix => new_time_tables
   def new
     @time_table = TimeTable.new
-    @time_table.artists.build
+    3.times do
+      @time_table.artists.build
+    end
+    # @time_table.artists.build
   end
 
   # POST /time_tables Prefix => time_tables
@@ -14,6 +17,7 @@ class TimeTablesController < ApplicationController
       # @time_table.save!                                     # インスタンスを保存する(例外を発生させる)
       # @artist = Artist.new(artist_params[:artist])          # params[:time_table][:artist][:name]をインスタンス変数に代入
       # @artist.save!                                         # インスタンスを保存する(例外を発生させる)
+      binding.pry
       flash[:success] = '成功' # フラッシュメッセージ
       redirect_to root_path # root_pathにリダイレクト
       flash.now[:danger] = '失敗'
