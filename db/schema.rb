@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_06_18_160953) do
   create_table "time_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "name"
-    t.integer "stage"
+    t.integer "stage", default: 2
     t.text "commitment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
