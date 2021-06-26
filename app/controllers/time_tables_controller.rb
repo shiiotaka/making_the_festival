@@ -32,7 +32,7 @@ class TimeTablesController < ApplicationController
     # @artist = Artist.new(artist_params[:artist])          # params[:time_table][:artist][:name]をインスタンス変数に代入
     # @time_table.artist_id = Artist.find(params[:artist_id])                # @time_tableにcurrent_userのidを代入
     if @time_table.valid?
-        @time_table.save
+      @time_table.save
       # @time_table.save!                                     # インスタンスを保存する(例外を発生させる)
       # @artist = Artist.new(artist_params[:artist])          # params[:time_table][:artist][:name]をインスタンス変数に代入
       # @artist.save!                                         # インスタンスを保存する(例外を発生させる)
