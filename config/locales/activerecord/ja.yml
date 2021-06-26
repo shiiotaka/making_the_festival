@@ -11,7 +11,7 @@ ja:
       time_table:
         name: フェス名
         stage: ステージ数
-        commitment: こだわり
+        commitment: フェスのこだわり
       artist:
         name: アーティスト
       

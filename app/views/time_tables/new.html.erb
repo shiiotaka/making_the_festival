@@ -27,14 +27,24 @@
       </div>
     </div>
     <div class="form-row">
-      <%= f.fields_for :artists do |a| %>
+      <%= f.fields_for :schedules do |a| %>
         <div class='form-group'>
-          <%= a.label :name,  "#{10 + a.index}:00" %>
-          <%= a.text_field :name, class:'form-control' %>
+          <%# <%= a.label :appearance_time, "#{10 + a.index}:00" %1> %>
+          <%= a.label :artist_id, a.object.appearance_time.strftime('%H:%M')%>
+          <%# <%= a.label :appearance_time, a.object.appearance_time %1> %>
+          <%# <%= a.text_field :name, class:'form-control' %1> %>
+          <%# <%= a.collection_select(:artist_id, @artist), :appearance_time, class:'form-control' %1> %>
+          <%# <%= a.collection_select :artist_id, @artists, :id, :name, { prompt: true }, class:'form-select'  %1> %>
+          <%= a.collection_select :artist_id, Artist.all, :id, :name, { prompt: true }, class:'form-select'  %>
+          <%= a.hidden_field :appearance_time %>
         </div>
       <% end %> <%# fields_for %>
     </div>
+    <div class='fes-commitment'>
+      <%= f.label :commitment %>
+      <%= f.text_area :commitment, class:'form-control' %>
+    </div>
     <%= f.submit %>
-  <% end %> <%# form_with %> 
+  <% end %> <%# form_with %>
   </div>
 </div>
