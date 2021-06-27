@@ -1,0 +1,41 @@
+// ライン線
+.fes-title {
+  display: flex;
+  align-items: center;
+  --text-divider-gap: 1rem;
+}
+.fes-title::before,
+.fes-title::after {
+  content: '';
+  height: 1px;
+  background-color: #333;
+  flex-grow: 1;
+}
+.fes-title::before {
+  margin-right: var(--text-divider-gap);
+}
+.fes-title::after {
+  margin-left: var(--text-divider-gap);
+}
+
+// form欄
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+
+.form-group:nth-child(even) {
+  margin-top: 4em;
+  flex-direction: row-reverse;
+}
+
+.form-control {
+  width: 50%;
+}

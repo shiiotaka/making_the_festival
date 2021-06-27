@@ -52,5 +52,11 @@ module MakingTheFestival
 
     # デフォルトの言語設定
     config.i18n.default_locale = :ja
+
+    # 時間を日本時間に設定
+    config.time_zone = 'Tokyo'
+
+    # field_with_errorsによるレイアウト崩れを防ぐ
+    # config.action_view.field_error_proc = proc { |html_tag, _instance| html_tag }
   end
 end

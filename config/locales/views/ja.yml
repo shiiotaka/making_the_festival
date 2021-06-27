@@ -12,4 +12,6 @@ ja:
   user_sessions:
     new:
       title: 'ログイン'
-
+  time_tables:
+    new:
+      create_time_table: 'タイムテーブルを作成する'

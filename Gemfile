@@ -40,6 +40,9 @@ group :development, :test do
   # RSpecテストgem
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+
+  # ER図生成gem
+  gem 'rails-erd'
 end
 
 group :development do

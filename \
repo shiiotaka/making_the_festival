@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class='text-center'>タイムテーブルの作成</h1>
+    </div>
+    <div class="col-xs-12">
+      <p class='text-center fes-title'><span>フェス概要</span></p>
+    </div>
+    <div class="col-xs-12">
+      <div class='container'>
+        <div class='fes-form'>
+          <%= form_with model: @time_table, local: true do |f| %>
+            <div='form-field'>
+              <%= f.label :name %>
+              <%= f.text_field :name %>
+            </div><br>
+            <%= f.fields_for :artists do |a| %>
+              <%= a.label :name %>
+              <%= a.text_field :name %>
+              <%= f.submit %>
+            <% end %>
+          <% end %>
+        </div>
+        <p class='text-center fes-title'><span>タイムテーブル</span></p>
+        <div>
+          <p class='text-center'>２ステージ</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class='container'>
+        fdsa
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class='container'>
+        fdsa
+      </div>
+    </div>
+  </div>
+</div>
