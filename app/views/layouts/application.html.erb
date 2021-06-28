@@ -17,7 +17,11 @@
       <%= render 'shared/not_login_header' %> <%# ログインしていないユーザーのHeader %>
     <% end %>
     <%= render 'shared/flash'%>  <%# フラッシュメッセージ %>
-      <%= yield %>
+    <div class='container'>
+      <%# <%= breadcrumbs root: " &rsaquo; " %1> %>
+      <%= breadcrumbs separator: " &rsaquo; " %>
+    </div>
+    <%= yield %>
     <%= render 'shared/footer'%> <%# フッター%>
   </body>
 </html>
