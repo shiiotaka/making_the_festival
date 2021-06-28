@@ -80,3 +80,7 @@ gem 'simple_form'
 
 # テストデータ挿入
 gem 'seed-fu'
+
+# パンくずリスト
+gem 'gretel'
+
