@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home' # rootディレクトリ
 
   resources :users, only: %i[new create index]
-  resources :time_tables do
-    resource :artists, only: %i[create destroy update], shallow: true
-  end
+  resources :time_tables
 
   get    'login'  => 'user_sessions#new', :as => :login
   post   'login'  => 'user_sessions#create'
