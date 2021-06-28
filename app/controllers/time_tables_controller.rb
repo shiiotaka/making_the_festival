@@ -21,6 +21,11 @@ class TimeTablesController < ApplicationController
     end
   end
 
+  # GET /time_tables/:id
+  def show
+
+  end
+
   private
 
   # StrongParameters
