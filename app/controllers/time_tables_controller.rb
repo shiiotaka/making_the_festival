@@ -23,8 +23,9 @@ class TimeTablesController < ApplicationController
 
   # GET /time_tables/:id
   def show
+    @user = User.find(params[:id])
     @time_table = TimeTable.find(params[:id])
-    @artists = @time_table.artists 
+    @artists = @time_table.artists
   end
 
   private

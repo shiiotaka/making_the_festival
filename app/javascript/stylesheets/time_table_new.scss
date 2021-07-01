@@ -39,3 +39,14 @@
 .form-control {
   width: 50%;
 }
+
+th {
+    position: relative;
+    top: -1.3em; /* 値は加減する必要があると思います */ 
+    left: -4em;
+}
+
+
+th.time {
+  border: none;
+}
