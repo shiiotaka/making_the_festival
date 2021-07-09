@@ -23,9 +23,11 @@ class TimeTablesController < ApplicationController
 
   # GET /time_tables/:id
   def show
-    @user = User.find(params[:id])
     @time_table = TimeTable.find(params[:id])
     @artists = @time_table.artists
+    # @artist = Artist.find(params[:id])
+    # @time = 21.times.map.each_with_index {|i| Time.parse("10:00")+30.minutes*i}
+    @user = User.find(params[:id])
   end
 
   private

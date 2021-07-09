@@ -40,13 +40,22 @@
   width: 50%;
 }
 
-th {
-    position: relative;
-    top: -1.3em; /* 値は加減する必要があると思います */ 
-    left: -4em;
+.appearance_time {
+  width: 5em;
+  position: relative;
+  top: 1.3em; /* 値は加減する必要があると思います */ 
+  right: 4em;
 }
 
 
-th.time {
-  border: none;
+td.artist {
+  background-color: #80ccff !important;
 }
+
+.thirty-minutes {
+  font-size: 14px;
+  position: relative;
+  top: 1.5em;
+  right: 4.3em;
+}
+
