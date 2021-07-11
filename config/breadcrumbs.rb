@@ -13,6 +13,11 @@ crumb :time_table_new do
   parent :root
 end
 
+crumb :time_table_show do
+  link "フェス・タイムテーブル", time_table_path
+  parent :time_table_new
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
