@@ -39,3 +39,23 @@
 .form-control {
   width: 50%;
 }
+
+.appearance_time {
+  width: 5em;
+  position: relative;
+  top: 1.3em; /* 値は加減する必要があると思います */ 
+  right: 4em;
+}
+
+
+td.artist {
+  background-color: #80ccff !important;
+}
+
+.thirty-minutes {
+  font-size: 14px;
+  position: relative;
+  top: 1.5em;
+  right: 4.3em;
+}
+

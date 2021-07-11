@@ -1,0 +1,156 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% breadcrumb :time_table_show %>
+      <div class='users-fes text-center'>
+        <%# <p>あなたのフェス</p> %>
+        <p><%= @user.name %>のフェス</p>
+      </div>
+      <div class='fes-name text-center'>
+        <%# <h1>フェス名</h1> %>
+        <h1><%= @time_table.name %></h1>
+      </div>
+      <div class='time_table'>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class='text-center'>ステージ1</th>
+              <th class='text-center'>ステージ2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class='appearance_time'>10:00</th>
+              <%# <td class='artist'><%= @artists[0].name %1></td> %>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>10:30</th>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[0].name %></td>
+              <%# <td></td> %>
+              <td style='border:none'></td>
+            </tr>
+            <tr>
+              <th class='appearance_time'>11:00</th>
+              <td></td>
+              <%# <td></td> %>
+              <%# <td class='artist'><%= @artists[1].name %1></td> %>
+            </tr>
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>11:30</th>
+              <td style='border:none'></td>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[1].name %></td>
+            </tr>
+            <tr>
+              <th class='appearance_time'>12:00</th>
+              <%# <td class='artist'><%= @artists[2].name %1></td> %>
+              <td></td>
+              <%# <td></td> %>
+            </tr>
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>12:30</th>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[2].name %></td>
+              <td style='border:none'></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>13:00</th>
+              <td></td>
+              <%# <td></td> %>
+              <%# <td class='artist'><%= @artists[3].name %1></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>13:30</th>
+              <td style='border:none'></td>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[3].name %></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>14:00</th>
+              <%# <td class='artist'><%= @artists[4].name %1></td> %>
+              <td></td>
+              <%# <td></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>14:30</th>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[4].name %></td>
+              <td style='border:none'></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>15:00</th>
+              <td></td>
+              <%# <td></td> %>
+              <%# <td class='artist'><%= @artists[5].name %1></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>15:30</th>
+              <td style='border:none'></td>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[5].name %></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>16:00</th>
+              <%# <td class='artist'><%= @artists[6].name %1></td> %>
+              <td></td>
+              <%# <td></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>16:30</th>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[6].name %></td>
+              <td style='border:none'></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>17:00</th>
+              <td></td>
+              <%# <td></td> %>
+              <%# <td class='artist'><%= @artists[7].name %1></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>17:30</th>
+              <td style='border:none'></td>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[7].name %></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>18:00</th>
+              <%# <td class='artist'><%= @artists[8].name %1></td> %>
+              <td></td>
+              <%# <td></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>18:30</th>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[8].name %></td>
+              <td style='border:none'></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>19:00</th>
+              <td></td>
+              <%# <td></td> %>
+              <%# <td class='artist'><%= @artists[9].name %1></td> %>
+            </tr> 
+            <tr>
+              <th class='appearance_time thirty-minutes', style='border:none'>19:30</th>
+              <td style='border:none'></td>
+              <td class='artist', rowspan='2', align='center', valign='middle'><%= @artists[9].name %></td>
+            </tr> 
+            <tr>
+              <th class='appearance_time'>20:00</th>
+              <%# <td class='artist'><%= @artists[10].name %1></td> %>
+              <td></td>
+              <%# <td></td> %>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class='note'>
+        <p class='text-end'>※アーティストをクリックしてセットリストを作成する</p>
+      </div> <div class='fes-commitment'>
+        <h5>フェスのこだわり</h5>
+        <p class='commitment'><%= @time_table.commitment %></p>
+      </div>
+      <div class='text-center'>
+        <p class='btn btn-primary time-table-post'><i class='fab fa-twitter'></i>タイムテーブルを投稿する</p>
+      </div>
+    </div>
+  </div>
+</div>
